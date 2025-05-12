@@ -139,7 +139,8 @@ public class SpellChecker {
         String str;
         for (int i = 0; i < word.length() - 1; i++) {
             char ch = word.charAt(i);
-            if (cur.nodes[ch - 'a'] == null || cur.nodes[ch - 'a'].nodes[word.charAt(i + 1) - 'a'] == null) {
+            if (cur.nodes[ch - 'a'] == null
+                    || cur.nodes[ch - 'a'].nodes[word.charAt(i + 1) - 'a'] == null) {
                 for (int j = 0; j < cur.nodes.length; j++) {
                     if (i == word.length() - 1) {
                         return getOneCharEndCorrections(word);
